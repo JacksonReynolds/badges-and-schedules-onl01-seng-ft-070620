@@ -14,18 +14,15 @@ end #batch_badge_creator
 def assign_rooms(speakers)
   rooms = []
   speakers.each do |speaker|
-    rooms.push("Hello, #{speaker}! You'll be assigned to room ")
+    rooms.push("Hello, #{speaker}! You'll be assigned to room #{speaker.find_index +1}!")
   end #each
 end #assign_rooms
 
 def printer(attendees)
-  badges = batch_badge_creator(attendees)
-  badges.each do |badge|
+  batch_badge_creator(attendees).each do |badge|
     puts badge
   end #each
-  rooms = assign_rooms(attendees)
-  rooms.each do |room|
+  assign_rooms(attendees).each do |room|
     puts room
   end #each
-
-end
+end #assign_rooms
