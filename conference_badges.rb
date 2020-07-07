@@ -10,3 +10,19 @@ def batch_badge_creator(name_array)
   end #each
   badge_array
 end #batch_badge_creator
+
+def assign_rooms(speakers)
+
+end #assign_rooms
+
+def printer(attendees)
+  badges = batch_badge_creator(attendees)
+  badges.each do |badge|
+    puts badge
+  end #each
+  rooms = assign_rooms(attendees)
+  rooms.each do |room|
+    puts room
+  end #each
+
+end
